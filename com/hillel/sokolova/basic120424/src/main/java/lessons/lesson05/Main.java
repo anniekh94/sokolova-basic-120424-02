@@ -13,23 +13,18 @@ public class Main {
 
         if (scanner.hasNextDouble()) {
             double salary = scanner.nextDouble();
-
-            double tax1 = salary * 0.025;
-            double tax2 = salary * 0.043;
-            double tax3 = salary * 0.067;
-
-            String result1 = String.format("%.2f",tax1);
-            String result2 = String.format("%.2f",tax2);
-            String result3 = String.format("%.2f",tax3);
-
-            if (salary >= a & salary <= b) {
+            if (salary >= a && salary <= b) {
+                double tax1 = salary * 0.025;
+                String result1 = String.format("%.2f",tax1);
                 System.out.println("Tax for income in range of 0 to 10000 is " + result1);
-            } else if (salary > b & salary <= c) {
+            } if (salary > b && salary <= c) {
+                double tax2 = salary * 0.043;
+                String result2 = String.format("%.2f",tax2);
                 System.out.println("Tax for income in range of 10000 to 25000 is " + result2);
-            } else if (salary > c) {
+            } if (salary > c) {
+                double tax3 = salary * 0.067;
+                String result3 = String.format("%.2f",tax3);
                 System.out.println("Tax for income more than 25000 is " + result3);
-            } else {
-                System.out.println("You enter wrong value!");
             }
         } else {
             System.out.println("You enter wrong value!");
